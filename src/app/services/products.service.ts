@@ -1,6 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Product } from '../interfaces/product';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class ProductsService {
   private _httpClient = inject(HttpClient);
 
   // definir la ruta de acceso a la api
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = environment.appUrl;
 
   // metodos para hacer las peticiones a la api
 
